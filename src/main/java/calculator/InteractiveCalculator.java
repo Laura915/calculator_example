@@ -3,6 +3,7 @@ package calculator;
 import java.util.Scanner;
 
 import calculator.operations.AddOperation;
+import calculator.operations.DivideOperation;
 import calculator.operations.MultiplyOperation;
 import calculator.operations.SubstractOperation;
 
@@ -45,7 +46,10 @@ public class InteractiveCalculator {
 			multiply.setB(numberB);
 			result = multiply.getResult();
 		} else if (operation.equals("divide")) {
-			
+			DivideOperation divide = new DivideOperation();
+			divide.setA(numberA);
+			divide.setB(numberB);
+			result = divide.getResult();
 		} else {
 			System.out.println("Did not understand oparation");
 		}
