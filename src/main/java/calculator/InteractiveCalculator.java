@@ -2,6 +2,8 @@ package calculator;
 
 import java.util.Scanner;
 
+import calculator.operations.AddOperation;
+
 public class InteractiveCalculator {
 
 	/**
@@ -24,7 +26,24 @@ public class InteractiveCalculator {
 		scanner.nextLine();
 		String operation = scanner.nextLine();
 		
-		// have inputs 
+		int result = 0;
+		if (operation.equals("add")) {
+			AddOperation add = new AddOperation();
+			add.setA(numberA);
+			add.setB(numberB);
+			result = add.getResult();
+		} else if (operation.equals("substract")) {
+			
+		} else if (operation.equals("multiply")) {
+		
+		} else if (operation.equals("divide")) {
+			
+		} else {
+			System.out.println("Did not understand oparation");
+		}
+
+		System.out.println("The result is");
+		System.out.println(result);
 		
 	}
 	
