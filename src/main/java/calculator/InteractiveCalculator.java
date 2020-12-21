@@ -3,6 +3,8 @@ package calculator;
 import java.util.Scanner;
 
 import calculator.operations.AddOperation;
+import calculator.operations.MultiplyOperation;
+import calculator.operations.SubstractOperation;
 
 public class InteractiveCalculator {
 
@@ -33,9 +35,15 @@ public class InteractiveCalculator {
 			add.setB(numberB);
 			result = add.getResult();
 		} else if (operation.equals("substract")) {
-			
+			SubstractOperation substract = new SubstractOperation();
+			substract.setA(numberA);
+			substract.setB(numberB);
+			result = substract.getResult();
 		} else if (operation.equals("multiply")) {
-		
+			MultiplyOperation multiply = new MultiplyOperation();
+			multiply.setA(numberA);
+			multiply.setB(numberB);
+			result = multiply.getResult();
 		} else if (operation.equals("divide")) {
 			
 		} else {
