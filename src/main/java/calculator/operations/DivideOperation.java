@@ -14,7 +14,10 @@ final public class DivideOperation {
 	}
 	
 	public int getResult() {
-		return this.a / this.b;
+		if(a==0 ||b==0) {
+			return 0;
+		}
+		return this.a /= this.b;
 	}
 	
 }
